@@ -1,0 +1,9 @@
+配置本地yum源：
+ cd /etc/yum.repos.d/ 进入目录
+rm -rf * 删除目录内容
+vim /etc/yum.repos.d/dgf.repo 创建文件dgf.repo
+[local]
+name=local
+baseurl=file:///mnt ( 光盘挂载点)
+gpgcheck=0 （不启用验证）
+enabled=1 （启用本地yum源）
